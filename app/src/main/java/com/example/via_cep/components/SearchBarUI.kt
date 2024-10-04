@@ -4,13 +4,16 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.SearchBar
+import androidx.compose.material3.SearchBarDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -29,15 +32,20 @@ fun SearchBarUI(
     placeholder: String = "",
     onQueryChange: (String) -> Unit
 ) {
+
+    var active by remember {
+        mutableStateOf(false)
+    }
     SearchBar(
         modifier = Modifier,
         query = query,
         onQueryChange = {
-            onQueryChange(it)
+            onQueryChange("")
         } ,
         onSearch = {} ,
         active = false,
-        onActiveChange = {},
+        onActiveChange = {
+        },
         placeholder = {
             Text(text = placeholder,
                 color = Color.Gray)
@@ -58,9 +66,13 @@ fun SearchBarUI(
                 },
                 tint = Color.Gray
             )
-        }
+        },
+        shape = RoundedCornerShape(16.dp),
+        content = {
 
-    ) { }
+    }
+
+    )
 }
 
 @Preview(showBackground = true)
@@ -73,7 +85,7 @@ private fun SearchBarUIPreview() {
 
     Column (
         modifier = Modifier
-        .fillMaxSize()
+            .fillMaxSize()
             .padding(16.dp)
     ){
         SearchBarUI(
