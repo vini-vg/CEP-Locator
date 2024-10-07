@@ -1,4 +1,4 @@
-package com.example.via_cep.components
+package com.example.via_cep.presenter.app.ui.components.Search
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column

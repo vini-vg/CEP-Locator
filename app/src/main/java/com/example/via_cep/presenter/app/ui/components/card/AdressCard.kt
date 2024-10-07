@@ -1,6 +1,5 @@
-package com.example.via_cep.components
+package com.example.via_cep.presenter.app.ui.components.card
 
-import android.widget.Space
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.via_cep.presenter.app.ui.components.Menu.MenuOption
 
 @Composable
 fun AdressCard(

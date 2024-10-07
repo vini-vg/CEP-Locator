@@ -1,4 +1,4 @@
-package com.example.via_cep.ui.theme
+package com.example.via_cep.presenter.app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,6 +1,5 @@
-package com.example.via_cep.ui.theme
+package com.example.via_cep.presenter.app.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
